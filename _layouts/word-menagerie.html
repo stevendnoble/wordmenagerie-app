@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | Word Menagerie</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="theme-color" content="#f5f2fc">
+  <link rel="canonical" href="{{ page.url | absolute_url | replace_first: 'http://', 'https://' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | escape }} | Word Menagerie">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url | replace_first: 'http://', 'https://' }}">
+  {% assign share_image = '/assets/word-menagerie/word-menagerie-share.jpg' | absolute_url | replace_first: 'http://', 'https://' %}
+  <meta property="og:image" content="{{ share_image }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Word Menagerie app icon and Letter Duel gameplay. Eight word games for iPhone.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ share_image }}">
+  <link rel="icon" type="image/webp" href="{{ '/assets/word-menagerie/menagerie-icon.webp' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/word-menagerie/style.css' | relative_url }}?v=20261112-2">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" aria-label="Word Menagerie home" href="{{ '/' | relative_url }}"><img src="{{ '/assets/word-menagerie/menagerie-icon.webp' | relative_url }}" width="46" height="46" alt=""></a>
+    <nav aria-label="Main navigation"><a href="{{ '/#games' | relative_url }}">The games</a><a href="{{ '/#pricing' | relative_url }}">Free & full</a><a href="{{ '/#support' | relative_url }}">Support</a></nav>
+  </header>
+  {% if page.landing %}
+    <main id="main">{{ content }}</main>
+  {% else %}
+    <main id="main" class="legal wrap"><a class="back" href="{{ '/' | relative_url }}">← Back to Word Menagerie</a>{{ content }}</main>
+  {% endif %}
+  <footer class="site-footer wrap">
+    <a class="footer-brand" href="{{ '/' | relative_url }}">A little wordplay goes a long way.</a>
+    <nav aria-label="Footer navigation"><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a><a href="{{ '/disclosures/' | relative_url }}">Disclosures & Credits</a><a href="mailto:wordmenagerie.support@gmail.com">Contact support</a></nav>
+    <p>Created by <a href="https://stevendnoble.com/">Steven Noble</a>. © {{ site.time | date: '%Y' }} Steven Noble.</p>
+  </footer>
+</body>
+</html>
