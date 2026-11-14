@@ -84,10 +84,8 @@
                                           .site-header nav a{
                                             text-decoration:none;
                                             color:var(--muted);
-                                            font-size:1rem;
-                                            min-height:44px;
-                                            display:flex;
-                                            align-items:center}
+                                            font-size:14px;
+                                            padding-block:10px}
                                             .site-header nav a:hover{
                                               color:var(--purple)}
                                               .hero{
@@ -334,6 +332,10 @@
                                                                                                                                                               .legal{
                                                                                                                                                                 max-width:790px;
                                                                                                                                                                 padding-block:50px 85px}
+                                                                                                                                                                .back{
+                                                                                                                                                                  font-size:14px;
+                                                                                                                                                                  display:inline-block;
+                                                                                                                                                                  margin-bottom:38px}
                                                                                                                                                                   .legal h1{
                                                                                                                                                                     font-size:clamp(38px,5vw,56px)}
                                                                                                                                                                     .legal h2{
@@ -407,11 +409,13 @@
                                                                                                                                                                                                                   font-size:9px;
                                                                                                                                                                                                                   letter-spacing:1.4px}
                                                                                                                                                                                                                   .site-header nav{
-                                                                                                                                                                                                                    gap:0 8px;
+                                                                                                                                                                                                                    gap:8px;
                                                                                                                                                                                                                     flex-wrap:wrap;
-                                                                                                                                                                                                                    justify-content:flex-end}
-                                                                                                                                                                                                                  .site-header nav a{
-                                                                                                                                                                                                                    padding-inline:4px}
+                                                                                                                                                                                                                    justify-content:flex-end;
+                                                                                                                                                                                                                    max-width:190px}
+                                                                                                                                                                                                                    .site-header nav a{
+                                                                                                                                                                                                                      font-size:11px;
+                                                                                                                                                                                                                      padding:6px}
                                                                                                                                                                                                                       .hero{
                                                                                                                                                                                                                         grid-template-columns:1fr;
                                                                                                                                                                                                                         gap:32px;
@@ -501,11 +505,12 @@
                                                                                                                                                                                                                                                                                     scroll-behavior:auto}
                                                                                                                                                                                                                                                                                   }
 
-/* Keep individual labels together when the navigation wraps. */
-.site-header .brand { flex-shrink: 0; display: flex; align-items: center; min-height: 44px; min-width: 44px; }
+/* Keep the icon and all navigation links on one line, including narrow phones. */
+.site-header .brand { flex-shrink: 0; }
 .site-header nav a { white-space: nowrap; }
 @media (max-width: 600px) {
   .site-header { align-items: center; }
+  .site-header nav { flex-wrap: nowrap; max-width: none; gap: 8px; }
 }
 
 .screen-preview {
