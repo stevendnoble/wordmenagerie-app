@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ share_image }}">
   <link rel="icon" type="image/webp" href="{{ '/assets/word-menagerie/menagerie-icon.webp' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/word-menagerie/style.css' | relative_url }}?v=20261112-2">
+  <link rel="stylesheet" href="{{ '/assets/word-menagerie/style.css' | relative_url }}?v=20261113-1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
   {% if page.landing %}
     <main id="main">{{ content }}</main>
   {% else %}
-    <main id="main" class="legal wrap"><a class="back" href="{{ '/' | relative_url }}">← Back to Word Menagerie</a>{{ content }}</main>
+    <main id="main" class="legal wrap">{{ content }}</main>
   {% endif %}
   <footer class="site-footer wrap">
     <a class="footer-brand" href="{{ '/' | relative_url }}">A little wordplay goes a long way.</a>
